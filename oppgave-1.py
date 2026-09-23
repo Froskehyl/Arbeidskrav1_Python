@@ -25,13 +25,20 @@ def text_reverse(text: str):
 
 # antall tegn med og uten mellomrom
 # teksten med små bokstaver
-# om teksten inneholder ordet python, uavhengig av store og små bokstaver
 
 text = str(input("Please enter text here: "))
 
 print("Your text in reverse:", text_reverse(text))
 
-word_python = "Python" or "PYTHON" or "python"
+# Sjekke om tekten har python i seg, MEN en fallgruve her er hvis det f.eks. står pYthon vil den vise False:
+word_python = "Python" or "PYTHON" or "python" or "pYTHON"
+if word_python in text == True:
+    print("Your text contains the word python.")
+else:
+    print("Your text does not contain the word python.")
+
+
+
 
 
 
