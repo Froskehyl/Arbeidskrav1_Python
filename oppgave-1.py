@@ -18,34 +18,39 @@
 #         print(f"The total time is {time} minutes.")
 from typing import cast
 
+
 # Task 1.2
-#Samler alltid funkjsonene på toppen, her funksjonen jeg senere henter frem for å reversere teksten:
+# Samler alltid funkjsonene på toppen:
 def text_reverse(text: str):
     return text[::-1]
+def counting_without_space(text: str):
+    without = len(text.replace(" ", ""))
+    return without
+"""
+Text_reverse gir teksten tilbake baklengs.
+Counting_without_space lar deg bruke len() uten at den teller med mellomrom.
+Parameteren er string.
 
-# antall tegn med og uten mellomrom
-# teksten med små bokstaver
+"""
 
-text = str(input("Please enter text here: "))
-
-print("Your text in reverse:", text_reverse(text))
-
-# Sjekke om tekten har python i seg, MEN en fallgruve her er hvis det f.eks. står pYthon vil den vise False:
-word_python = "Python" or "PYTHON" or "python" or "pYTHON"
-if word_python in text == True:
-    print("Your text contains the word python.")
-else:
-    print("Your text does not contain the word python.")
-
-
-
-
-
-
+# text = str(input("Please enter text here: "))
+# print("Your text in reverse:", text_reverse(text))
+# print("Antall tegn i teksten (med mellomrom):", len(text))
+# print("Antall tegn i teksten (uten mellomrom):",counting_without_space(text))
+# text_in_lower = text.lower()
+# print("Teksten din i små bokstaver:", text_in_lower)
+# word_python = "python"
+# print("Inneholder teksten ordet python:", (word_python in text_in_lower))
 
 
-
-
+# Task 1.3
+# try:
+#     numb1 = int(input("Please enter a starting number: "))
+#     numb2 = int(input("Please enter an ending number: "))
+# except ValueError:
+#     print("Error, try again. Please enter a whole number. For example 1, 2 or 3.")
+# except ZeroDivisionError:
+#     print("Error, try again. Cannot divide by zero. ")
 
 
 
